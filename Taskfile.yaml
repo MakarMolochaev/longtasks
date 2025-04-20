@@ -1,0 +1,8 @@
+version: "3"
+
+tasks:
+  run:
+    desc: "Run program"
+    cmds:
+    - docker run -d --name longtasks_redis -p 6379:6379 redis
+    - go run cmd/longtasks/main.go --config=./config/local.yaml

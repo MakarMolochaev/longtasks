@@ -1,0 +1,6 @@
+enм: "local"
+redis:
+  url: "redis://localhost:6379"
+http:
+  url: 0.0.0.0:8080
+task_timeout: 5m
