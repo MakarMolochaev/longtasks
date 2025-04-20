@@ -49,7 +49,11 @@ func NewGetTaskHandler(taskManager *taskmanager.TaskManager) http.HandlerFunc {
 }
 
 func getProcessorForTaskType(taskType string) taskmanager.TaskProcessor {
-	return &genericTaskProcessor{}
+
+	switch taskType {
+	default:
+		return &genericTaskProcessor{}
+	}
 }
 
 type genericTaskProcessor struct{}
